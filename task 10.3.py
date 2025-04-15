@@ -1,4 +1,6 @@
 from PIL import Image, ImageDraw, ImageFont
+import os
+os.makedirs("именные открытки", exist_ok=True)
 cards = {"День Бабаевского шоколада": "открытки/бабаевский шоколад.jpg", "День хинкалей в виде мопсов": "открытки/мопсы-хинкали.jpg", "День правила буравчика": "открытки/правило буравчика.jpg", "День принцессы": "открытки/принцесса.jpg", "День тигрового рулета": "открытки/тигровый рулет.jpg"}
 k=1
 print("Список праздников:")
@@ -47,6 +49,6 @@ if day in cards:
                 draw.text((text_position[0] + sdvig, text_position[1]), name, font=shrift, fill="#422000")
                 draw.text((text_position[0], text_position[1] + sdvig), name, font=shrift, fill="#422000")
             draw.text(text_position, name, font=shrift, fill="#FFDEAD")
-
+    card.save("именные открытки/"+day + name + ".png")
     card.show()
 else: print("Праздника пока нет в списке, выберите другой(")
