@@ -49,6 +49,6 @@ if day in cards:
                 draw.text((text_position[0] + sdvig, text_position[1]), name, font=shrift, fill="#422000")
                 draw.text((text_position[0], text_position[1] + sdvig), name, font=shrift, fill="#422000")
             draw.text(text_position, name, font=shrift, fill="#FFDEAD")
-    card.save("именные открытки/"+day + name + ".png")
+    card.save("именные открытки/"+day +" " + name + ".png")
     card.show()
 else: print("Праздника пока нет в списке, выберите другой(")
